@@ -92,7 +92,7 @@ class BookingDialog extends CancelAndHelpDialog {
         // Capture the response to the previous step's prompt
         bookingDetails.destination = stepContext.result;
         if (!bookingDetails.origin) {
-            const messageText = 'From what city will you be travelling?';
+            const messageText = 'From what cities will you be travelling?';
             const msg = MessageFactory.text(messageText, 'From what city will you be travelling?', InputHints.ExpectingInput);
             return await stepContext.prompt(TEXT_PROMPT, { prompt: msg });
         }
